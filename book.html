@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee & Books</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      margin: 10% auto;
+      border-radius: 12px;
+      position: relative;
+      text-align: center;
+    }
+    .modal-content img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="images/logo.png" alt="Coffee & Books">
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="drinks.html">DRINKS</a></li>
+        <li><a href="coffee.html">COFFEE</a></li>
+        <li><a href="dessert.html">DESSERT</a></li>
+        <li><a href="book.html" class="active">BOOK</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="book">
+  <h2>Ваші улюблені книжечки</h2>
+  <div class="book-story-block">
+    <img src="images/book-candle.jpg" alt="Книга і свічка" class="book-story-img">
+    <div class="book-story-text">
+      <h2>Чому в нашій кав’ярні живуть книжечки? </h2>
+      <h2> ☕📚💫</h2>
+      <p>
+        Ми віримо, що кава — це більше, ніж напій. Це момент тиші, затишку, натхнення.
+        Саме тому ми вирішили додати до цього моменту ще трохи магії — книги.
+      </p>
+      <p>
+        Кожна книжечка на нашій полиці — це частинка душі нашої кав’ярні. Ми обрали їх з любов’ю,
+        щоби ви могли взяти паузу, зануритись у сторінки, відчути аромат кави і слова одночасно.
+      </p>
+      <p>
+        Читайте, мрійте, надихайтесь — ми поруч, і завжди раді розділити з вами ці теплі миті!
+      </p>
+    </div>
+  </div>
+  
+  <h4>Детективи та трилери</h4>
+  <div class="book-list">
+    <div class="book-card" onclick="openModal(this)" data-title="Я бачу вас цікавить пітьма" data-author="Ілларіон Павлюк" data-description="Цей роман — захопливий психологічний трилер із глибокими внутрішніми конфліктами." data-image="images/b4.png">
+      <img src="images/b4.png" alt="">
+      <h3>"Я бачу вас цікавить пітьма"</h3>
+      <p class="author">Ілларіон Павлюк</p>
+    </div>
+    <div class="book-card" onclick="openModal(this)" data-title="Таємна історія" data-author="Донна Тартт" data-description="Річард Пейпен – молодий каліфорнієць, що вступає до приватного коледжу у Новій Англії та завдяки щасливому випадку опиняється в закритій спільноті з вивчення давньогрецької культури. Шестеро студентів: близнюки Чарльз і Камілла, інтелігентний Генрі, витончений Френсіс, веселий Банні та Річард майже весь час разом, і ніщо не віщує біди. Проте любов до античної культури врешті-решт призводить до зовсім не давньогрецької трагедії, і на землю біля коледжу проливається кров одного з них…" data-image="images/b5.png">
+      <img src="images/b5.png" alt="">
+      <h3>"Таємна історія"</h3>
+      <p class="author">Донна Тартт</p>
+    </div>
+    <div class="book-card" onclick="openModal(this)" data-title="Танці з кістками" data-author="Андрій Сем'яківськів" data-description="Справжній трилер з елементами чорного гумору та детективу." data-image="images/b6.png">
+      <img src="images/b6.png" alt="">
+      <h3>"Танці з кістками"</h3>
+      <p class="author">Андрій Сем'яківськів</p>
+    </div>
+  </div>
+</section>
+
+<section class="book">
+    <h4>Фентезі</h4>
+    <div class="book-list">
+      <div class="book-card" onclick="openModal(this)" data-title="Зодягну на себе ніч" data-author="Террі Пратчетт" data-description="Чарівна історія про юну відьму, яка пізнає магію і власну силу у дивовижному світі Дискосвіту." data-image="images/b1.png">
+        <img src="images/b1.png" alt="">
+        <h3>"Зодягну на себе ніч"</h3>
+        <p class="author">Террі Пратчетт</p>
+      </div>
+      <div class="book-card" onclick="openModal(this)" data-title="Право на чари" data-author="Террі Пратчетт" data-description="Сатирична пригода в стилі фентезі, де навіть магія підкоряється бюрократії." data-image="images/b2.png">
+        <img src="images/b2.png" alt="">
+        <h3>"Право на чари"</h3>
+        <p class="author">Террі Пратчетт</p>
+      </div>
+      <div class="book-card" onclick="openModal(this)" data-title="Маскарад" data-author="Террі Пратчетт" data-description="Дотепна пародія на «Привида опери» у світі Дискосвіту з відьмами, театром і змовами." data-image="images/b3.png">
+        <img src="images/b3.png" alt="">
+        <h3>"Маскарад"</h3>
+        <p class="author">Террі Пратчетт</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="book">
+    <h4>Любовні романи</h4>
+    <div class="book-list">
+      <div class="book-card" onclick="openModal(this)" data-title="Покинь, якщо кохаєш" data-author="Колін Гувер" data-description="Сильна історія про кохання, яке кидає виклик болю, вибору і свободі." data-image="images/b7.png">
+        <img src="images/b7.png" alt="">
+        <h3>"Покинь, якщо кохаєш"</h3>
+        <p class="author">Колін Гувер</p>
+      </div>
+      <div class="book-card" onclick="openModal(this)" data-title="Пляжне чтиво" data-author="Емілі Генрі" data-description="Дві протилежності опиняються на канікулах поруч і несподівано закохуються." data-image="images/b8.png">
+        <img src="images/b8.png" alt="">
+        <h3>"Пляжне чтиво"</h3>
+        <p class="author">Емілі Генрі</p>
+      </div>
+      <div class="book-card" onclick="openModal(this)" data-title="Бріджертони" data-author="Джулія Куїнн" data-description="Аристократичний роман про інтриги, балетні сукні та справжні почуття в Лондоні." data-image="images/b9.png">
+        <img src="images/b9.png" alt="">
+        <h3>"Бріджертони"</h3>
+        <p class="author">Джулія Куїнн</p>
+      </div>
+    </div>
+  </section>
+  
+<footer class="footer"> 
+    <div class="footer-container" style="position: relative;">
+      <img src="images/decor-icon.png" alt="Icon" class="corner-icon">
+      <div class="footer-logo">
+        <h2><span class="blue">CO</span><span class="brown">FFE</span> & <span class="brown">BOO</span><span class="blue">KS</span></h2>
+      </div>
+      <div class="footer-column">
+        <h3>Магазин</h3>
+        <a href="coffee.html">Кава</a>
+        <a href="drinks.html">Напої</a>
+        <a href="dessert.html">Десерти</a>
+      </div>
+      <div class="footer-column">
+        <h3>Інше</h3>
+        <a href="book.html">Книги</a>
+      </div>
+      <div class="footer-column">
+        <h3>Контакти</h3>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="tel:+380971601453">+380971601453</a>
+      </div>
+      <div class="footer-column">
+        <h3>Де нас знайти?</h3>
+        <p><strong>Ірпінь, вулиця Лісова 64</strong></p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Модальне вікно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h2 id="modalTitle"></h2>
+      <p id="modalAuthor"></p>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+  
+  <script>
+    function openModal(el) {
+      document.getElementById("modalTitle").innerText = el.dataset.title;
+      document.getElementById("modalAuthor").innerText = "Автор: " + el.dataset.author;
+      document.getElementById("modalDescription").innerText = el.dataset.description;
+      document.getElementById("modalImage").src = el.dataset.image;
+      document.getElementById("modal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+  
+  </body>
+  </html>
